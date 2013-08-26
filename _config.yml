@@ -1,0 +1,3 @@
+name: RHC Tech Team
+exclude: ['bower_components', 'node_modules', 'assets/_less']
+permalink: /:categories/:title/

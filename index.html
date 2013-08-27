@@ -1,14 +1,14 @@
 ---
 layout: default
 title: Your New Jekyll Site
-base_url: "./"
+base_url: "."
 ---
 
 <div id="home">
   <h1>Categories</h1>
   <ul class="posts">
     {% for category in site.category_list %}
-      <li><a href="{{ page.base_url}}{{ category }}/">{{ category }}</a></li>
+      <li><a href="{{ page.base_url}}/{{ category }}/">{{ category }}</a></li>
     {% endfor %}
   </ul>
 </div>

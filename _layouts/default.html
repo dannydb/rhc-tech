@@ -7,17 +7,33 @@
         <meta name="viewport" content="width=device-width">
 
         <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="{{ page.base_url }}/assets/css/application.css">
+        <link rel="stylesheet" href="{{ page.base_url }}assets/css/application.css">
 
     </head>
     <body>
 
         <div class="container">
           <div class="site">
-            <div class="header">
-              <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-              <a class="extra" href="/">home</a>
-            </div>
+            <nav class="navbar navbar-inverse navbar-fixed-top">
+              <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="{{ page.base_url }}"><img src="http://www.acts29network.org/mediafiles/uploaded/r/0e1560107_redemption-hill-church-logo.png"> Tech Team</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-ex1-collapse">
+                  <ul class="nav navbar-nav">
+                    <li><a href="{{ page.base_url }}audio/">Audio</a></li>
+                    <li><a href="{{ page.base_url }}video/">Video</a></li>
+                    <li><a href="{{ page.base_url }}setup/">Setup</a></li>
+                  </ul>
+                </div><!-- /.navbar-collapse -->
+            </nav>
      
                 {{ content }}
 

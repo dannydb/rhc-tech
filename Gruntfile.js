@@ -36,7 +36,8 @@ module.exports = function (grunt) {
                     '_posts/*',
                     '_includes/*',
                     '_config.yml',
-                    'index.html'
+                    'index.html',
+                    '/*.html'
                 ],
                 tasks: ['jekyll', 'concurrent:server']
             },

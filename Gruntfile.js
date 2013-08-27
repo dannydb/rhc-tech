@@ -28,6 +28,29 @@ module.exports = function (grunt) {
             }
         },
 
+        // Concatenate JS
+
+        concat: {
+          application: {
+            src: [
+              'bower_components/jquery/jquery.min.js',
+              'bower_components/bootstrap/js/transition.js',
+              'bower_components/bootstrap/js/alert.js',
+              'bower_components/bootstrap/js/button.js',
+              'bower_components/bootstrap/js/carousel.js',
+              'bower_components/bootstrap/js/collapse.js',
+              'bower_components/bootstrap/js/dropdown.js',
+              'bower_components/bootstrap/js/modal.js',
+              'bower_components/bootstrap/js/tooltip.js',
+              'bower_components/bootstrap/js/popover.js',
+              'bower_components/bootstrap/js/scrollspy.js',
+              'bower_components/bootstrap/js/tab.js',
+              'bower_components/bootstrap/js/affix.js'
+            ],
+            dest: 'assets/js/application.js'
+          }
+        },
+
         // Automatically run a task when a file changes
         watch: {
             jekyll: {
@@ -76,6 +99,7 @@ module.exports = function (grunt) {
 
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-concurrent');
     grunt.loadNpmTasks('grunt-recess');
     grunt.loadNpmTasks('grunt-jekyll');
@@ -92,5 +116,5 @@ module.exports = function (grunt) {
     });
 
     // The dev task will be used during development
-    grunt.registerTask('dev', ['clean:development', 'recess:bootstrap', 'jekyll', 'concurrent:watch', 'concurrent:server']);
+    grunt.registerTask('dev', ['clean:development', 'recess:bootstrap', 'concat', 'jekyll', 'concurrent:watch', 'concurrent:server']);
 };

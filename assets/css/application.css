@@ -6805,7 +6805,18 @@ td.visible-print {
 }
 
 body {
-  padding-top: 100px;
+  padding-top: 65px;
+}
+
+.wf-loading h1,
+.wf-loading h2,
+.wf-loading h3,
+.wf-loading h4,
+.wf-loading h5,
+.wf-loading h6,
+.wf-loading p,
+.wf-loading li {
+  visibility: hidden;
 }
 
 .navbar img {
@@ -6836,6 +6847,17 @@ body {
 
 .wf-loading .category h1 {
   visibility: hidden;
+}
+
+.category .posts {
+  padding-left: 0;
+  list-style: none;
+}
+
+.category .posts li {
+  font-family: "Open Sans Condensed", "Helvetica Neue Condensed", Helvetica, Arial, sans-serif;
+  font-size: 32px;
+  font-weight: 300;
 }
 
 .post h2 {

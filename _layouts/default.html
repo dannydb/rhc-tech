@@ -6,22 +6,15 @@
         <title>{% if page.title %}{{ page.title }} &middot; {% endif %}RHC Tech Team</title>
         <meta name="viewport" content="width=device-width">
 
-        <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="{{ page.base_url }}/assets/css/application.css">
-
         <script type="text/javascript">
           WebFontConfig = {
             google: { families: [ 'Open+Sans:400italic,700italic,400,300,700:latin', 'Open+Sans+Condensed:300,700:latin' ] }
           };
-          (function() {
-            var wf = document.createElement('script');
-            wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
-              '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-            wf.type = 'text/javascript';
-            wf.async = 'true';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(wf, s);
-          })(); </script>
+        </script>
+        <script src="//ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="{{ page.base_url }}/assets/css/application.css">
 
     </head>
     <body{% if page.template_class %} class="{{ page.template_class }}"{% endif %}>
@@ -37,15 +30,15 @@
                       <span class="icon-bar"></span>
                       <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="{{ page.base_url }}"><img src="{{ page.base_url }}/assets/img/logo.png"> Tech Team</a>
+                    <a class="navbar-brand" href="{{ page.base_url }}"><img src="{{ page.base_url }}/assets/img/logo.png"> Production Team</a>
                   </div>
 
                   <!-- Collect the nav links, forms, and other content for toggling -->
                   <div class="collapse navbar-collapse navbar-ex1-collapse">
                     <ul class="nav navbar-nav">
-                      <li><a href="{{ page.base_url }}/audio/">Audio</a></li>
-                      <li><a href="{{ page.base_url }}/video/">Video</a></li>
-                      <li><a href="{{ page.base_url }}/setup/">Setup</a></li>
+                      {% for category in site.category_list %}
+                          <li><a href="{{ page.base_url}}/{{ category }}/">{{ category }}</a></li>
+                        {% endfor %}
                     </ul>
                   </div><!-- /.navbar-collapse -->
                 </div>

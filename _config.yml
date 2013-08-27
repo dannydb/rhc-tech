@@ -1,4 +1,4 @@
-name: RHC Tech Team
+name: RHC Production Team
 exclude: ['bower_components', 'node_modules', 'assets/_less']
 permalink: pretty
-category_list: ['audio', 'video', 'setup']
+category_list: ['audio', 'video', 'setup', 'teardown']

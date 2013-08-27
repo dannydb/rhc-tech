@@ -2,7 +2,13 @@
 
 
 body {
-	padding-top: 100px;
+	padding-top: 65px;
+}
+
+.wf-loading {
+	h1,h2,h3,h4,h5,h6,p,li {
+		visibility: hidden;
+	}
 }
 
 .navbar {
@@ -37,6 +43,17 @@ body {
 
 		.wf-loading & {
 			visibility: hidden;
+		}
+	}
+
+	.posts {
+		list-style: none;
+		padding-left: 0;
+
+		li {
+			font-family: @font-family-condensed;
+			font-weight: 300;
+			font-size: @font-size-base*2;
 		}
 	}
 }

@@ -8,7 +8,7 @@ base_url: ".."
 	<h1>{{ page.title }}</h1>
 	{{ content }}
 </section>
-<section id="todoapp" class="col-xs-12 col-sm-4">
+<section id="todoapp" class="col-xs-12 col-sm-6">
 	<header id="header">
 		<h2>Checklist</h2>
 		<!-- <input id="new-todo" placeholder="What needs to be done?" autofocus> -->
@@ -20,7 +20,7 @@ base_url: ".."
 	</section>
 	<footer id="footer"></footer>
 </section>
-<section class="col-xs-12 col-sm-8">
+<section class="col-xs-12 col-sm-6">
 
   <h2>Help Topics</h2>
 
@@ -49,7 +49,7 @@ base_url: ".."
 	<div class="view">
 		<input class="toggle" type="checkbox" <%= completed ? 'checked' : '' %>>
 		<label><%- title %></label>
-		<button class="destroy"></button>
+		<!--<button class="destroy"></button>-->
 	</div>
 	<input class="edit" value="<%- title %>">
 </script>
@@ -67,6 +67,6 @@ base_url: ".."
 		</li>
 	</ul>
 	<% if (completed) { %>
-	<button id="clear-completed">Clear completed (<%= completed %>)</button>
+	<!-- <button id="clear-completed">Clear completed (<%= completed %>)</button> -->
 	<% } %>
 </script>

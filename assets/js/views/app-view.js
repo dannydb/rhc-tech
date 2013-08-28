@@ -44,10 +44,10 @@ var app = app || {};
 			// from being re-rendered for every model. Only renders when the 'reset'
 			// event is triggered at the end of the fetch.
 			app.todos.fetch({reset: true});
-
-			if (app.todos.length === 0) {
+			if (app.todos.length !== this.$list.find('li').length) {
+				_.invoke(app.todos.completed(), 'destroy');
+				_.invoke(app.todos.remaining(), 'destroy');
 				this.$list.find('li').each(function(element){
-					console.log($(this).text());
 					var item_attributes  = {
 						title: $(this).text(),
 						order: app.todos.nextOrder(),

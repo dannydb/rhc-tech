@@ -6819,6 +6819,10 @@ body {
   visibility: hidden;
 }
 
+.jumbotron h1 {
+  font-weight: 300;
+}
+
 .navbar img {
   height: 40px;
   margin-right: 5px;
@@ -6867,4 +6871,13 @@ body {
 
 .wf-loading .post h2 {
   visibility: hidden;
+}
+
+.home .jumbotron {
+  overflow: hidden;
+}
+
+.home .jumbotron .btn-lg {
+  font-size: 32px;
+  font-weight: 300;
 }

@@ -1,13 +1,17 @@
 ---
 layout: default
+template_class: home
 base_url: "."
 ---
 
-<div id="home">
-  <h1>Categories</h1>
-  <ul class="posts">
-    {% for category in site.category_list %}
-      <li><a href="{{ page.base_url}}/{{ category }}/">{{ category }}</a></li>
-    {% endfor %}
-  </ul>
+<div class="jumbotron">
+    <h1 class="col-xs-12 col-sm-12">Service Production Guide</h1>
+    <p class="row">
+      <p class="col-xs-12 col-sm-6"><a class="btn btn-primary btn-lg btn-block" href="{{ page.base_url}}/audio/">Audio <span class="glyphicon glyphicon-volume-up"></span></a></p>
+      <p class="col-xs-12 col-sm-6"><a class="btn btn-primary btn-lg btn-block" href="{{ page.base_url}}/video/">Video <span class="glyphicon glyphicon-facetime-video"></span></a></p>
+    </p>
+    <p class="row">
+      <p class="col-xs-12 col-sm-6"><a class="btn btn-primary btn-lg btn-block" href="{{ page.base_url}}/setup/">Setup <span class="glyphicon glyphicon-arrow-up"></span></a></p>
+      <p class="col-xs-12 col-sm-6"><a class="btn btn-primary btn-lg btn-block" href="{{ page.base_url}}/teardown/">Teardown <span class="glyphicon glyphicon-arrow-down"></span></a></p>
+    </p>
 </div>

@@ -11,6 +11,12 @@ body {
 	}
 }
 
+.jumbotron {
+	h1 {
+		font-weight: 300;
+	}
+}
+
 .navbar {
 	img {
 		height: 40px;
@@ -65,6 +71,17 @@ body {
 
 		.wf-loading & {
 			visibility: hidden;
+		}
+	}
+}
+
+.home {
+	.jumbotron {
+		overflow: hidden;
+
+		.btn-lg {
+			font-size: @font-size-base * 2;
+			font-weight: 300;
 		}
 	}
 }

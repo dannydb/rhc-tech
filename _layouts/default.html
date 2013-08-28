@@ -1,56 +1,5 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>{% if page.title %}{{ page.title }} &middot; {% endif %}RHC Tech Team</title>
-        <meta name="viewport" content="width=device-width">
-
-        <script type="text/javascript">
-          WebFontConfig = {
-            google: { families: [ 'Open+Sans:400italic,700italic,400,300,700:latin', 'Open+Sans+Condensed:300,700:latin' ] }
-          };
-        </script>
-        <script src="//ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
-
-        <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="{{ page.base_url }}/assets/css/application.css">
-
-    </head>
-    <body{% if page.template_class %} class="{{ page.template_class }}"{% endif %}>
-
-        <div class="container">
-          <div class="site">
-            <nav class="navbar navbar-inverse navbar-fixed-top">
-              <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                      <span class="sr-only">Toggle navigation</span>
-                      <span class="icon-bar"></span>
-                      <span class="icon-bar"></span>
-                      <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="{{ page.base_url }}"><img src="{{ page.base_url }}/assets/img/logo.png"> Production Team</a>
-                  </div>
-
-                  <!-- Collect the nav links, forms, and other content for toggling -->
-                  <div class="collapse navbar-collapse navbar-ex1-collapse">
-                    <ul class="nav navbar-nav">
-                      {% for category in site.category_list %}
-                          <li><a href="{{ page.base_url}}/{{ category }}/">{{ category }}</a></li>
-                        {% endfor %}
-                    </ul>
-                  </div><!-- /.navbar-collapse -->
-                </div>
-            </nav>
+{% include header.html %}
      
                 {{ content }}
 
-            <div class="footer">
-            </div>
-          </div>
-        </div> <!-- /container -->
-
-        <script src="{{ page.base_url }}/assets/js/application.js"></script>
-    </body>
-</html>
+{% include footer.html %}

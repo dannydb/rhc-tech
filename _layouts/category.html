@@ -1,0 +1,31 @@
+---
+layout: default
+template_class: category
+base_url: ".."
+---
+
+<div id="home">
+  <h1>{{ page.title }} Topics</h1>
+  
+  {{ content }}
+
+  <ul class="posts">
+  	{% if page.title == "Video" %}
+	    {% for post in site.categories.video %}
+	      {% include category_post.html %}
+	    {% endfor %}
+	{% elsif page.title == "Audio" %}
+	    {% for post in site.categories.audio %}
+	      {% include category_post.html %}
+	    {% endfor %}
+	{% elsif page.title == "Setup" %}
+	    {% for post in site.categories.setup %}
+	      {% include category_post.html %}
+	    {% endfor %}
+	{% elsif page.title == "Teardown" %}
+	    {% for post in site.categories.teardown %}
+	      {% include category_post.html %}
+	    {% endfor %}
+	{% endif %}
+  </ul>
+</div>

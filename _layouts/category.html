@@ -11,10 +11,10 @@ base_url: ".."
 <section id="todoapp" class="col-xs-12 col-sm-6 col-sm-push-6">
 	
 	<h2>Checklist</h2>
+	<a id="toggle-all" class="btn btn-warning btn-sm">Reset all</a>
 	<!-- <input id="new-todo" placeholder="What needs to be done?" autofocus> -->
 	<header id="list-header"></header>
 	<section id="main">
-		<a id="toggle-all" class="btn btn-primary btn-sm">Reset all</a>
 		<ul id="todo-list"></ul>
 	</section>
 	<header id="list-footer"></header>
@@ -54,16 +54,18 @@ base_url: ".."
 </script>
 <script type="text/template" id="stats-template">
 	
-	<div id="filters" class="btn-group">
-			<a class="btn btn-primary active" href="#/">All</a>
-			<a class="btn btn-primary" href="#/active">Active</a>
-			<a class="btn btn-primary" href="#/completed">Completed</a>
+	<div id="filters" class="btn-group btn-group-sm">
+			<a class="btn btn-default active" href="#/">All</a>
+			<a class="btn btn-default" href="#/active">Active</a>
+			<a class="btn btn-default" href="#/completed">Completed</a>
 	</div>
+
+	<span id="todo-count"><strong><%= remaining %></strong> <%= remaining === 1 ? 'item' : 'items' %> left</span>
 	<% if (completed) { %>
 	<!-- <button id="clear-completed">Clear completed (<%= completed %>)</button> -->
 	<% } %>
 </script>
 
 <script type="text/template" id="count-template">
-	<span id="todo-count"><strong><%= remaining %></strong> <%= remaining === 1 ? 'item' : 'items' %> left</span>
+	
 </script>

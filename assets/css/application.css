@@ -6844,12 +6844,14 @@ body {
   color: #fff;
 }
 
-.category {
-  /*
-		Hack to remove background from Mobile Safari.
-		Can't use it globally since it destroys checkboxes in Firefox and Opera
-	*/
+.footer {
+  min-height: 200px;
+  margin-top: 30px;
+  background: #333333;
+}
 
+.footer .logo img {
+  max-width: 100%;
 }
 
 .category .main h1 {
@@ -6869,6 +6871,11 @@ body {
 .category .main .posts li {
   font-size: 32px;
   font-weight: 300;
+}
+
+.category #todoapp {
+  position: relative;
+  overflow: hidden;
 }
 
 .category #todoapp input::-webkit-input-placeholder {
@@ -6942,8 +6949,14 @@ body {
 
 .category #toggle-all {
   position: absolute;
-  top: -42px;
+  top: 25px;
   right: 0;
+}
+
+@media (max-width: 767px) {
+  .category #toggle-all {
+    top: 69px;
+  }
 }
 
 .category #todo-list {
@@ -7100,8 +7113,20 @@ body {
 }
 
 .category #todo-count {
-  float: left;
+  float: right;
   text-align: left;
+}
+
+.category #todo-count strong {
+  color: #f26f20;
+}
+
+@media (max-width: 767px) {
+  .category #todo-count {
+    display: block;
+    float: none;
+    margin-top: 10px;
+  }
 }
 
 .category #clear-completed {
@@ -7131,16 +7156,6 @@ body {
 
 .category #info a {
   color: inherit;
-}
-
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  .category #todo-list li .toggle {
-    height: 40px;
-  }
-  .category #toggle-all {
-    top: -40px;
-    right: 0;
-  }
 }
 
 .post h2 {

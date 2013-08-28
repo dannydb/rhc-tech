@@ -71,12 +71,7 @@ var app = app || {};
 				this.$main.show();
 				this.$header.show();
 
-				this.$footer.html(this.statsTemplate({
-					completed: completed,
-					remaining: remaining
-				}));
-
-				this.$header.html(this.countTemplate({
+				this.$header.html(this.statsTemplate({
 					completed: completed,
 					remaining: remaining
 				}));

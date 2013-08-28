@@ -41,6 +41,18 @@ body {
 	}
 }
 
+.footer {
+	background: @gray-dark;
+	min-height: 200px;
+	margin-top: 30px;
+
+	.logo {
+		img {
+			max-width: 100%;
+		}
+	}
+}
+
 .category {
 
 	.main {
@@ -63,6 +75,11 @@ body {
 				font-size: @font-size-base*2;
 			}
 		}
+	}
+
+	#todoapp {
+		position: relative;
+		overflow: hidden;
 	}
 
 
@@ -137,8 +154,12 @@ body {
 
 	#toggle-all {
 		position: absolute;
-		top: -42px;
+		top: 25px;
 		right: 0;
+
+		@media (max-width: @screen-xs-max){
+			top: 69px;
+		}
 	}
 
 	// #toggle-all:before {
@@ -293,8 +314,18 @@ body {
 	}
 
 	#todo-count {
-		float: left;
+		float: right;
 		text-align: left;
+
+		strong {
+			color: @brand-primary;
+		}
+
+		@media (max-width: @screen-xs-max){
+			float: none;
+			margin-top: 10px;
+			display: block;
+		}
 	}
 
 	#clear-completed {
@@ -324,26 +355,6 @@ body {
 
 	#info a {
 		color: inherit;
-	}
-
-	/*
-		Hack to remove background from Mobile Safari.
-		Can't use it globally since it destroys checkboxes in Firefox and Opera
-	*/
-	@media screen and (-webkit-min-device-pixel-ratio:0) {
-
-		#todo-list li .toggle {
-			height: 40px;
-		}
-
-		#toggle-all {
-			top: -40px;
-			right: 0;
-			// -webkit-transform: rotate(90deg);
-			// transform: rotate(90deg);
-			// -webkit-appearance: none;
-			// appearance: none;
-		}
 	}
 
 }

@@ -6881,3 +6881,9 @@ body {
   font-size: 32px;
   font-weight: 300;
 }
+
+@media (max-width: 767px) {
+  .home .jumbotron .row {
+    margin-bottom: 0;
+  }
+}

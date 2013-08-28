@@ -7001,6 +7001,10 @@ body {
   content: '✔';
 }
 
+.category #todo-list li .toggle:checked {
+  background: transparent;
+}
+
 .category #todo-list li .toggle:checked:after {
   position: relative;
   bottom: 1px;

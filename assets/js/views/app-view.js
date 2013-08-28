@@ -21,6 +21,7 @@ var app = app || {};
 		// Delegated events for creating new items, and clearing completed ones.
 		events: {
 			//'keypress #new-todo': 'createOnEnter',
+			'click .toggle + label': 'toggleCheckbox',
 			'click #clear-completed': 'clearCompleted',
 			'click #toggle-all': 'toggleAllComplete'
 		},
@@ -137,6 +138,10 @@ var app = app || {};
 		clearCompleted: function () {
 			_.invoke(app.todos.completed(), 'destroy');
 			return false;
+		},
+
+		toggleCheckbox: function (e) {
+			$(e.currentTarget).prev().trigger('click'); 
 		},
 
 		toggleAllComplete: function () {

@@ -11,19 +11,19 @@ base_url: ".."
 
   <ul class="posts">
   	{% if page.title == "Video" %}
-	    {% for post in site.categories.video reverse %}
+	    {% for post in site.categories.video reversed %}
 	      {% include category_post.html %}
 	    {% endfor %}
 	{% elsif page.title == "Audio" %}
-	    {% for post in site.categories.audio reverse %}
+	    {% for post in site.categories.audio reversed %}
 	      {% include category_post.html %}
 	    {% endfor %}
 	{% elsif page.title == "Setup" %}
-	    {% for post in site.categories.setup reverse %}
+	    {% for post in site.categories.setup reversed %}
 	      {% include category_post.html %}
 	    {% endfor %}
 	{% elsif page.title == "Teardown" %}
-	    {% for post in site.categories.teardown reverse %}
+	    {% for post in site.categories.teardown reversed %}
 	      {% include category_post.html %}
 	    {% endfor %}
 	{% endif %}

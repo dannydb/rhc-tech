@@ -6,24 +6,24 @@ base_url: ".."
 
 <div id="home">
   <h1>{{ page.title }} Topics</h1>
-  
+
   {{ content }}
 
   <ul class="posts">
   	{% if page.title == "Video" %}
-	    {% for post in site.categories.video %}
+	    {% for post in site.categories.video reverse %}
 	      {% include category_post.html %}
 	    {% endfor %}
 	{% elsif page.title == "Audio" %}
-	    {% for post in site.categories.audio %}
+	    {% for post in site.categories.audio reverse %}
 	      {% include category_post.html %}
 	    {% endfor %}
 	{% elsif page.title == "Setup" %}
-	    {% for post in site.categories.setup %}
+	    {% for post in site.categories.setup reverse %}
 	      {% include category_post.html %}
 	    {% endfor %}
 	{% elsif page.title == "Teardown" %}
-	    {% for post in site.categories.teardown %}
+	    {% for post in site.categories.teardown reverse %}
 	      {% include category_post.html %}
 	    {% endfor %}
 	{% endif %}

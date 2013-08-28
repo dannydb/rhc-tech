@@ -4,5 +4,6 @@ title: Teardown
 ---
 
 <span id="checklist" class="hidden"></span>
-- Breakdown house speaker clusters
+- Power down speakers and load to stage left closet
 - Return chairs and tables to stage
+- Pack up- and down-stage racks in stage left closet

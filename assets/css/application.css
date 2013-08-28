@@ -6949,7 +6949,7 @@ body {
 
 .category #todo-list {
   padding: 0;
-  margin: 0;
+  margin: 15px 0;
   list-style: none;
 }
 
@@ -6982,7 +6982,7 @@ body {
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 40px;
+  width: 30px;
   height: auto;
   margin: auto 0;
   text-align: center;
@@ -7009,8 +7009,8 @@ body {
 
 .category #todo-list li label {
   display: block;
-  padding: 15px;
-  margin-left: 45px;
+  padding: 5px 15px;
+  margin-left: 30px;
   font-weight: 300;
   line-height: 1.2;
   word-break: break-word;
@@ -7135,7 +7135,7 @@ body {
     height: 40px;
   }
   .category #toggle-all {
-    top: -30px;
+    top: -40px;
     right: 0;
   }
 }

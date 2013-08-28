@@ -9,16 +9,15 @@ base_url: ".."
 	{{ content }}
 </section>
 <section id="todoapp" class="col-xs-12 col-sm-6">
-	<header id="header">
-		<h2>Checklist</h2>
-		<!-- <input id="new-todo" placeholder="What needs to be done?" autofocus> -->
-	</header>
+	
+	<h2>Checklist</h2>
+	<!-- <input id="new-todo" placeholder="What needs to be done?" autofocus> -->
+	<header id="list-header"></header>
 	<section id="main">
-		<input id="toggle-all" type="checkbox">
-		<label for="toggle-all">Mark all as complete</label>
+		<a id="toggle-all" class="btn btn-primary btn-sm">Reset all</a>
 		<ul id="todo-list"></ul>
 	</section>
-	<footer id="footer"></footer>
+	<header id="list-footer"></header>
 </section>
 <section class="col-xs-12 col-sm-6">
 
@@ -54,19 +53,17 @@ base_url: ".."
 	<input class="edit" value="<%- title %>">
 </script>
 <script type="text/template" id="stats-template">
-	<span id="todo-count"><strong><%= remaining %></strong> <%= remaining === 1 ? 'item' : 'items' %> left</span>
-	<ul id="filters">
-		<li>
-			<a class="selected" href="#/">All</a>
-		</li>
-		<li>
-			<a href="#/active">Active</a>
-		</li>
-		<li>
-			<a href="#/completed">Completed</a>
-		</li>
-	</ul>
+	
+	<div id="filters" class="btn-group">
+			<a class="btn btn-primary active" href="#/">All</a>
+			<a class="btn btn-primary" href="#/active">Active</a>
+			<a class="btn btn-primary" href="#/completed">Completed</a>
+	</div>
 	<% if (completed) { %>
 	<!-- <button id="clear-completed">Clear completed (<%= completed %>)</button> -->
 	<% } %>
+</script>
+
+<script type="text/template" id="count-template">
+	<span id="todo-count"><strong><%= remaining %></strong> <%= remaining === 1 ? 'item' : 'items' %> left</span>
 </script>

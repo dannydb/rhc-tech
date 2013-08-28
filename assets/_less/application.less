@@ -138,21 +138,18 @@ body {
 		position: absolute;
 		top: -42px;
 		right: 0;
-		width: 40px;
-		text-align: center;
-		border: none; /* Mobile Safari */
 	}
 
-	#toggle-all:before {
-		content: '»';
-		font-size: 28px;
-		color: #d9d9d9;
-		padding: 0 25px 7px;
-	}
+	// #toggle-all:before {
+	// 	content: '»';
+	// 	font-size: 28px;
+	// 	color: #d9d9d9;
+	// 	padding: 0 25px 7px;
+	// }
 
-	#toggle-all:checked:before {
-		color: #737373;
-	}
+	// #toggle-all:checked:before {
+	// 	color: #737373;
+	// }
 
 	#todo-list {
 		margin: 0;
@@ -279,6 +276,10 @@ body {
 		margin-bottom: -1px;
 	}
 
+	#list-header {
+		.clearfix();
+	}
+
 	#footer {
 		color: #777;
 		height: 20px;
@@ -289,29 +290,6 @@ body {
 	#todo-count {
 		float: left;
 		text-align: left;
-	}
-
-	#filters {
-		margin: 0;
-		padding: 0;
-		list-style: none;
-		position: absolute;
-		right: 0;
-		left: 0;
-	}
-
-	#filters li {
-		display: inline;
-	}
-
-	#filters li a {
-		color: #83756f;
-		margin: 2px;
-		text-decoration: none;
-	}
-
-	#filters li a.selected {
-		font-weight: bold;
 	}
 
 	#clear-completed {
@@ -348,24 +326,18 @@ body {
 		Can't use it globally since it destroys checkboxes in Firefox and Opera
 	*/
 	@media screen and (-webkit-min-device-pixel-ratio:0) {
-		#toggle-all,
-		#todo-list li .toggle {
-			background: none;
-		}
 
 		#todo-list li .toggle {
 			height: 40px;
 		}
 
 		#toggle-all {
-			top: -56px;
+			top: -30px;
 			right: 0;
-			width: 65px;
-			height: 41px;
-			-webkit-transform: rotate(90deg);
-			transform: rotate(90deg);
-			-webkit-appearance: none;
-			appearance: none;
+			// -webkit-transform: rotate(90deg);
+			// transform: rotate(90deg);
+			// -webkit-appearance: none;
+			// appearance: none;
 		}
 	}
 

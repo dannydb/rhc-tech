@@ -16,6 +16,7 @@ var app = app || {};
 
 		// Our template for the line of statistics at the bottom of the app.
 		statsTemplate: _.template($('#stats-template').html()),
+		countTemplate: _.template($('#count-template').html()),
 
 		// Delegated events for creating new items, and clearing completed ones.
 		events: {
@@ -30,7 +31,8 @@ var app = app || {};
 		initialize: function () {
 			this.allCheckbox = this.$('#toggle-all')[0];
 			this.$input = this.$('#new-todo');
-			this.$footer = this.$('#footer');
+			this.$header = this.$('#list-header');
+			this.$footer = this.$('#list-footer');
 			this.$main = this.$('#main');
 			this.$list = $('#checklist');
 
@@ -66,17 +68,22 @@ var app = app || {};
 
 			if (app.todos.length) {
 				this.$main.show();
-				this.$footer.show();
+				this.$header.show();
 
 				this.$footer.html(this.statsTemplate({
 					completed: completed,
 					remaining: remaining
 				}));
 
-				this.$('#filters li a')
-					.removeClass('selected')
+				this.$header.html(this.countTemplate({
+					completed: completed,
+					remaining: remaining
+				}));
+
+				this.$('#filters a')
+					.removeClass('active')
 					.filter('[href="#/' + (app.TodoFilter || '') + '"]')
-					.addClass('selected');
+					.addClass('active');
 			} else {
 				this.$main.hide();
 				this.$footer.hide();
@@ -137,7 +144,7 @@ var app = app || {};
 
 			app.todos.each(function (todo) {
 				todo.save({
-					'completed': completed
+					'completed': false
 				});
 			});
 		}

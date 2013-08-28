@@ -33,6 +33,7 @@ module.exports = function (grunt) {
         concat: {
           application: {
             src: [
+              'bower_components/todomvc-common/base.js',
               'bower_components/jquery/jquery.min.js',
               'bower_components/bootstrap/js/transition.js',
               'bower_components/bootstrap/js/alert.js',
@@ -45,7 +46,18 @@ module.exports = function (grunt) {
               'bower_components/bootstrap/js/popover.js',
               'bower_components/bootstrap/js/scrollspy.js',
               'bower_components/bootstrap/js/tab.js',
-              'bower_components/bootstrap/js/affix.js'
+              'bower_components/bootstrap/js/affix.js',
+              'bower_components/underscore/underscore-min.js',
+              'bower_components/backbone/backbone-min.js',
+              'bower_components/backbone.localStorage/backbone.localStorage-min.js',
+              'assets/js/models/todo.js',
+              'assets/js/collections/todos.js',
+              'assets/js/views/todo-view.js',
+              'assets/js/views/app-view.js',
+              'assets/js/routers/router.js',
+              'assets/js/app.js'
+
+              
             ],
             dest: 'assets/js/application.js'
           }

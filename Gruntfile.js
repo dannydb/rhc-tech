@@ -79,7 +79,8 @@ module.exports = function (grunt) {
             recess: {
                 files: [
                     'assets/_less/*.less',
-                    'bower_components/bootstrap/less/*.less'
+                    'bower_components/bootstrap/less/*.less',
+                    'bower_components/todomvc-common/base.less'
                 ],
                 tasks: ['recess:bootstrap', 'shell:copyCss']
             }

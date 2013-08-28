@@ -4,10 +4,25 @@ template_class: category
 base_url: ".."
 ---
 
-<div id="home">
-  <h1>{{ page.title }} Topics</h1>
+<section class="intro col-xs-12 col-sm-12">
+	<h1>{{ page.title }}</h1>
+	{{ content }}
+</section>
+<section id="todoapp" class="col-xs-12 col-sm-4">
+	<header id="header">
+		<h2>Checklist</h2>
+		<!-- <input id="new-todo" placeholder="What needs to be done?" autofocus> -->
+	</header>
+	<section id="main">
+		<input id="toggle-all" type="checkbox">
+		<label for="toggle-all">Mark all as complete</label>
+		<ul id="todo-list"></ul>
+	</section>
+	<footer id="footer"></footer>
+</section>
+<section class="col-xs-12 col-sm-8">
 
-  {{ content }}
+  <h2>Help Topics</h2>
 
   <ul class="posts">
   	{% if page.title == "Video" %}
@@ -28,4 +43,30 @@ base_url: ".."
 	    {% endfor %}
 	{% endif %}
   </ul>
-</div>
+</section>
+
+<script type="text/template" id="item-template">
+	<div class="view">
+		<input class="toggle" type="checkbox" <%= completed ? 'checked' : '' %>>
+		<label><%- title %></label>
+		<button class="destroy"></button>
+	</div>
+	<input class="edit" value="<%- title %>">
+</script>
+<script type="text/template" id="stats-template">
+	<span id="todo-count"><strong><%= remaining %></strong> <%= remaining === 1 ? 'item' : 'items' %> left</span>
+	<ul id="filters">
+		<li>
+			<a class="selected" href="#/">All</a>
+		</li>
+		<li>
+			<a href="#/active">Active</a>
+		</li>
+		<li>
+			<a href="#/completed">Completed</a>
+		</li>
+	</ul>
+	<% if (completed) { %>
+	<button id="clear-completed">Clear completed (<%= completed %>)</button>
+	<% } %>
+</script>

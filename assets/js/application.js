@@ -2258,11 +2258,15 @@ var app = app || {};
 	// The collection of todos is backed by *localStorage* instead of a remote
 	// server.
 	var Todos = Backbone.Collection.extend({
+
 		// Reference to this collection's model.
 		model: app.Todo,
 
 		// Save all of the todo items under the `"todos"` namespace.
-		localStorage: new Backbone.LocalStorage('todos-backbone'),
+		//localStorage: new Backbone.LocalStorage(app.listStorage),
+		setLocalStorage: function ( storageKey ) {
+		    this.localStorage = new Backbone.LocalStorage(storageKey)     
+		},
 
 		// Filter down the list of all todo items that are finished.
 		completed: function () {
@@ -2292,7 +2296,9 @@ var app = app || {};
 	});
 
 	// Create our global collection of **Todos**.
+	app.storageKey = $('.main h1').text().toLowerCase();
 	app.todos = new Todos();
+	app.todos.setLocalStorage(app.storageKey); 
 })();
 
 /*global Backbone, jQuery, _, ENTER_KEY */
@@ -2411,7 +2417,7 @@ var app = app || {};
 
 		// Delegated events for creating new items, and clearing completed ones.
 		events: {
-			'keypress #new-todo': 'createOnEnter',
+			//'keypress #new-todo': 'createOnEnter',
 			'click #clear-completed': 'clearCompleted',
 			'click #toggle-all': 'toggleAllComplete'
 		},
@@ -2424,6 +2430,7 @@ var app = app || {};
 			this.$input = this.$('#new-todo');
 			this.$footer = this.$('#footer');
 			this.$main = this.$('#main');
+			this.$list = $('#checklist');
 
 			this.listenTo(app.todos, 'add', this.addOne);
 			this.listenTo(app.todos, 'reset', this.addAll);
@@ -2435,6 +2442,18 @@ var app = app || {};
 			// from being re-rendered for every model. Only renders when the 'reset'
 			// event is triggered at the end of the fetch.
 			app.todos.fetch({reset: true});
+
+			if (app.todos.length === 0) {
+				this.$list.find('li').each(function(element){
+					console.log($(this).text());
+					var item_attributes  = {
+						title: $(this).text(),
+						order: app.todos.nextOrder(),
+						completed: false
+					}
+					app.todos.create(item_attributes);
+				});
+			}
 		},
 
 		// Re-rendering the App just means refreshing the statistics -- the rest

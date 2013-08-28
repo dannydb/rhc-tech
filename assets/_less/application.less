@@ -1,5 +1,5 @@
 @import '../../bower_components/bootstrap/less/bootstrap.less';
-
+@import '../../bower_components/todomvc-common/base.less';
 
 body {
 	padding-top: 65px;
@@ -43,23 +43,26 @@ body {
 }
 
 .category {
-	h1 {
-		font-family: @font-family-condensed;
-		font-weight: 700;
 
-		.wf-loading & {
-			visibility: hidden;
-		}
-	}
-
-	.posts {
-		list-style: none;
-		padding-left: 0;
-
-		li {
-			font-family: @font-family-condensed;
+	.main {
+		h1 {			
 			font-weight: 300;
-			font-size: @font-size-base*2;
+		}
+
+		h2 {
+			font-family: @font-family-condensed;
+			font-weight: 700;
+		}
+
+		.posts {
+			list-style: none;
+			padding-left: 0;
+
+			li {
+				font-family: @font-family-condensed;
+				font-weight: 300;
+				font-size: @font-size-base*2;
+			}
 		}
 	}
 }

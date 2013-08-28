@@ -6804,6 +6804,459 @@ td.visible-print {
   }
 }
 
+#todoapp input::-webkit-input-placeholder {
+  font-style: italic;
+}
+
+#todoapp input::-moz-placeholder {
+  font-style: italic;
+  color: #a9a9a9;
+}
+
+#todoapp h1 {
+  position: absolute;
+  top: -120px;
+  width: 100%;
+  font-size: 70px;
+  font-weight: bold;
+  color: #b3b3b3;
+  color: rgba(255, 255, 255, 0.3);
+  text-align: center;
+  -webkit-text-rendering: optimizeLegibility;
+     -moz-text-rendering: optimizeLegibility;
+      -ms-text-rendering: optimizeLegibility;
+       -o-text-rendering: optimizeLegibility;
+          text-rendering: optimizeLegibility;
+  text-shadow: -1px -1px rgba(0, 0, 0, 0.2);
+}
+
+#new-todo,
+.edit {
+  position: relative;
+  width: 100%;
+  padding: 6px;
+  margin: 0;
+  font-family: inherit;
+  font-size: 24px;
+  -webkit-font-smoothing: antialiased;
+     -moz-font-smoothing: antialiased;
+      -ms-font-smoothing: antialiased;
+       -o-font-smoothing: antialiased;
+          font-smoothing: antialiased;
+  line-height: 1.4em;
+  color: inherit;
+  border: 0;
+  border: 1px solid #999;
+  outline: none;
+  box-shadow: inset 0 -1px 5px 0 rgba(0, 0, 0, 0.2);
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+       -o-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#new-todo {
+  z-index: 2;
+  padding: 16px 16px 16px 60px;
+  background: rgba(0, 0, 0, 0.02);
+  border: none;
+  box-shadow: none;
+}
+
+#main {
+  position: relative;
+  z-index: 2;
+  border-top: 1px dotted #adadad;
+}
+
+label[for='toggle-all'] {
+  display: none;
+}
+
+#toggle-all {
+  position: absolute;
+  top: -42px;
+  right: 0;
+  width: 40px;
+  text-align: center;
+  border: none;
+  /* Mobile Safari */
+
+}
+
+#toggle-all:before {
+  padding: 0 25px 7px;
+  font-size: 28px;
+  color: #d9d9d9;
+  content: '»';
+}
+
+#toggle-all:checked:before {
+  color: #737373;
+}
+
+#todo-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+#todo-list li {
+  position: relative;
+  font-size: 24px;
+  border-bottom: 1px dotted #ccc;
+}
+
+#todo-list li:last-child {
+  border-bottom: none;
+}
+
+#todo-list li.editing {
+  padding: 0;
+  border-bottom: none;
+}
+
+#todo-list li.editing .edit {
+  display: block;
+  width: 506px;
+  padding: 13px 17px 12px 17px;
+  margin: 0 0 0 43px;
+}
+
+#todo-list li.editing .view {
+  display: none;
+}
+
+#todo-list li .toggle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 40px;
+  height: auto;
+  margin: auto 0;
+  text-align: center;
+  border: none;
+  -webkit-appearance: none;
+      -ms-appearance: none;
+       -o-appearance: none;
+          appearance: none;
+}
+
+#todo-list li .toggle:after {
+  font-size: 20px;
+  line-height: 43px;
+  color: #d9d9d9;
+  text-shadow: 0 -1px 0 #bfbfbf;
+  content: '✔';
+}
+
+#todo-list li .toggle:checked:after {
+  position: relative;
+  bottom: 1px;
+  color: #85ada7;
+  text-shadow: 0 1px 0 #669991;
+}
+
+#todo-list li label {
+  display: block;
+  padding: 15px;
+  margin-left: 45px;
+  line-height: 1.2;
+  word-break: break-word;
+  -webkit-transition: color 0.4s;
+     -moz-transition: color 0.4s;
+      -ms-transition: color 0.4s;
+       -o-transition: color 0.4s;
+          transition: color 0.4s;
+}
+
+#todo-list li.completed label {
+  color: #a9a9a9;
+  text-decoration: line-through;
+}
+
+#todo-list li .destroy {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  bottom: 0;
+  display: none;
+  width: 40px;
+  height: 40px;
+  margin: auto 0;
+  font-size: 22px;
+  color: #a88a8a;
+  -webkit-transition: all 0.2s;
+     -moz-transition: all 0.2s;
+      -ms-transition: all 0.2s;
+       -o-transition: all 0.2s;
+          transition: all 0.2s;
+}
+
+#todo-list li .destroy:hover {
+  text-shadow: 0 0 1px #000000, 0 0 10px rgba(199, 107, 107, 0.8);
+  -webkit-transform: scale(1.3);
+     -moz-transform: scale(1.3);
+      -ms-transform: scale(1.3);
+       -o-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+#todo-list li .destroy:after {
+  content: '✖';
+}
+
+#todo-list li:hover .destroy {
+  display: block;
+}
+
+#todo-list li .edit {
+  display: none;
+}
+
+#todo-list li.editing:last-child {
+  margin-bottom: -1px;
+}
+
+#footer {
+  z-index: 1;
+  height: 20px;
+  color: #777;
+  text-align: center;
+}
+
+#todo-count {
+  float: left;
+  text-align: left;
+}
+
+#filters {
+  position: absolute;
+  right: 0;
+  left: 0;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+#filters li {
+  display: inline;
+}
+
+#filters li a {
+  margin: 2px;
+  color: #83756f;
+  text-decoration: none;
+}
+
+#filters li a.selected {
+  font-weight: bold;
+}
+
+#clear-completed {
+  position: relative;
+  float: right;
+  padding: 0 10px;
+  font-size: 11px;
+  line-height: 20px;
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.2);
+}
+
+#clear-completed:hover {
+  background: rgba(0, 0, 0, 0.15);
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.3);
+}
+
+#info {
+  margin: 65px auto 0;
+  font-size: 12px;
+  color: #a6a6a6;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+#info a {
+  color: inherit;
+}
+
+/*
+	Hack to remove background from Mobile Safari.
+	Can't use it globally since it destroys checkboxes in Firefox and Opera
+*/
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  #toggle-all,
+  #todo-list li .toggle {
+    background: none;
+  }
+  #todo-list li .toggle {
+    height: 40px;
+  }
+  #toggle-all {
+    top: -56px;
+    right: 0;
+    width: 65px;
+    height: 41px;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    -webkit-appearance: none;
+            appearance: none;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+hr {
+  margin: 20px 0;
+  border: 0;
+  border-top: 1px dashed #C5C5C5;
+  border-bottom: 1px dashed #F7F7F7;
+}
+
+.learn a {
+  font-weight: normal;
+  color: #b83f45;
+  text-decoration: none;
+}
+
+.learn a:hover {
+  color: #787e7e;
+  text-decoration: underline;
+}
+
+.learn h3,
+.learn h4,
+.learn h5 {
+  margin: 10px 0;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #000;
+}
+
+.learn h3 {
+  font-size: 24px;
+}
+
+.learn h4 {
+  font-size: 18px;
+}
+
+.learn h5 {
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
+.learn ul {
+  padding: 0;
+  margin: 0 0 30px 25px;
+}
+
+.learn li {
+  line-height: 20px;
+}
+
+.learn p {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.3;
+}
+
+.quote {
+  margin: 20px 0 60px 0;
+  border: none;
+}
+
+.quote p {
+  font-style: italic;
+}
+
+.quote p:before {
+  position: absolute;
+  top: -20px;
+  left: 3px;
+  font-size: 50px;
+  content: '“';
+  opacity: .15;
+}
+
+.quote p:after {
+  position: absolute;
+  right: 3px;
+  bottom: -42px;
+  font-size: 50px;
+  content: '”';
+  opacity: .15;
+}
+
+.quote footer {
+  position: absolute;
+  right: 0;
+  bottom: -40px;
+}
+
+.quote footer img {
+  border-radius: 3px;
+}
+
+.quote footer a {
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
+.speech-bubble {
+  position: relative;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.04);
+  border-radius: 5px;
+}
+
+.speech-bubble:after {
+  position: absolute;
+  top: 100%;
+  right: 30px;
+  border: 13px solid transparent;
+  border-top-color: rgba(0, 0, 0, 0.04);
+  content: '';
+}
+
+/**body*/
+.learn-bar > .learn {
+  position: absolute;
+  top: 8px;
+  left: -300px;
+  width: 272px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 5px;
+  transition-duration: 500ms;
+  transition-property: left;
+}
+
+@media (min-width: 899px) {
+  {
+    /**body*/
+  }
+  .learn-bar {
+    width: auto;
+    margin: 0 0 0 300px;
+  }
+  .learn-bar > .learn {
+    left: 8px;
+  }
+  .learn-bar #todoapp {
+    width: 550px;
+    margin: 130px auto 40px auto;
+  }
+}
+
 body {
   padding-top: 65px;
 }
@@ -6844,21 +7297,21 @@ body {
   color: #fff;
 }
 
-.category h1 {
+.category .main h1 {
+  font-weight: 300;
+}
+
+.category .main h2 {
   font-family: "Open Sans Condensed", "Helvetica Neue Condensed", Helvetica, Arial, sans-serif;
   font-weight: 700;
 }
 
-.wf-loading .category h1 {
-  visibility: hidden;
-}
-
-.category .posts {
+.category .main .posts {
   padding-left: 0;
   list-style: none;
 }
 
-.category .posts li {
+.category .main .posts li {
   font-family: "Open Sans Condensed", "Helvetica Neue Condensed", Helvetica, Arial, sans-serif;
   font-size: 32px;
   font-weight: 300;

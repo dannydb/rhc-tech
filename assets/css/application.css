@@ -6883,6 +6883,12 @@ body {
 }
 
 @media (max-width: 767px) {
+  .home .jumbotron {
+    padding: 15px;
+  }
+  .home .jumbotron h1 {
+    margin-top: 0;
+  }
   .home .jumbotron .row {
     margin-bottom: 0;
   }

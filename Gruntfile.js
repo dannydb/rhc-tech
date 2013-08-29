@@ -67,6 +67,17 @@ module.exports = function (grunt) {
           }
         },
 
+        uglify: {
+          application: {
+            src: ['<%= concat.application.dest %>'],
+            dest: 'assets/js/application.min.js'
+          },
+          checklist: {
+            src: ['<%= concat.checklist.dest %>'],
+            dest: 'assets/js/checklist.min.js'
+          }
+        },
+
         // Automatically run a task when a file changes
         watch: {
             jekyll: {
@@ -117,6 +128,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-concurrent');
     grunt.loadNpmTasks('grunt-recess');
     grunt.loadNpmTasks('grunt-jekyll');
@@ -133,5 +145,5 @@ module.exports = function (grunt) {
     });
 
     // The dev task will be used during development
-    grunt.registerTask('dev', ['clean:development', 'recess:bootstrap', 'concat', 'jekyll', 'concurrent:watch', 'concurrent:server']);
+    grunt.registerTask('dev', ['clean:development', 'recess:bootstrap', 'concat', 'uglify', 'jekyll', 'concurrent:watch', 'concurrent:server']);
 };

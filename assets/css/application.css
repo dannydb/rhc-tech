@@ -6853,7 +6853,7 @@ body {
 .footer {
   min-height: 200px;
   margin-top: 30px;
-  background: #333333;
+  background: #eeeeee;
 }
 
 .footer .logo img {
@@ -7173,23 +7173,26 @@ body {
   visibility: hidden;
 }
 
-.home .jumbotron {
+.home .container .jumbotron {
+  padding: 0;
+  margin: 0 -15px;
   overflow: hidden;
+  background: transparent;
 }
 
-.home .jumbotron .btn-lg {
+.home .container .jumbotron .btn-lg {
   font-size: 32px;
   font-weight: 300;
 }
 
 @media (max-width: 767px) {
-  .home .jumbotron {
+  .home .container .jumbotron {
     padding: 15px;
   }
-  .home .jumbotron h1 {
+  .home .container .jumbotron h1 {
     margin-top: 0;
   }
-  .home .jumbotron .row {
+  .home .container .jumbotron .row {
     margin-bottom: 0;
   }
 }

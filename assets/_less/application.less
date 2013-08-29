@@ -14,6 +14,17 @@ body {
 	h1 {
 		font-weight: 300;
 	}
+
+	.btn {
+		@media (min-width: @screen-sm){
+			text-align: left;
+			padding: 15px;
+
+			.glyphicon {
+				float: right;
+			}
+		}
+	}
 }
 
 .navbar.navbar-inverse {
@@ -48,7 +59,7 @@ body {
 }
 
 .footer {
-	background: @gray-lighter;
+	border-top: 2px solid @gray-lighter;
 	min-height: 200px;
 	margin-top: 30px;
 

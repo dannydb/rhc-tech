@@ -4,14 +4,12 @@ template_class: home
 base_url: "."
 ---
 
-<div class="jumbotron">
-    <h1 class="col-xs-12 col-sm-12">Service Production Guide</h1>
-    <p class="row">
-      <p class="col-xs-12 col-sm-6"><a class="btn btn-primary btn-lg btn-block" href="{{ page.base_url}}/audio/">Audio <span class="glyphicon glyphicon-volume-up"></span></a></p>
-      <p class="col-xs-12 col-sm-6"><a class="btn btn-primary btn-lg btn-block" href="{{ page.base_url}}/video/">Video <span class="glyphicon glyphicon-facetime-video"></span></a></p>
-    </p>
-    <p class="row">
-      <p class="col-xs-12 col-sm-6"><a class="btn btn-primary btn-lg btn-block" href="{{ page.base_url}}/setup/">Setup <span class="glyphicon glyphicon-arrow-up"></span></a></p>
-      <p class="col-xs-12 col-sm-6"><a class="btn btn-primary btn-lg btn-block" href="{{ page.base_url}}/teardown/">Teardown <span class="glyphicon glyphicon-arrow-down"></span></a></p>
+<div class="jumbotron row">
+    <h1 class="col-xs-12 col-sm-6">Service Production Guide</h1>
+    <p class="col-xs-12 col-sm-6">
+		<a class="btn btn-primary btn-lg btn-block" href="{{ page.base_url}}/audio/">Audio <span class="glyphicon glyphicon-volume-up"></span></a>
+      	<a class="btn btn-primary btn-lg btn-block" href="{{ page.base_url}}/video/">Video <span class="glyphicon glyphicon-facetime-video"></span></a>
+      	<a class="btn btn-primary btn-lg btn-block" href="{{ page.base_url}}/setup/">Setup <span class="glyphicon glyphicon-arrow-up"></span></a>
+      	<a class="btn btn-primary btn-lg btn-block" href="{{ page.base_url}}/teardown/">Teardown <span class="glyphicon glyphicon-arrow-down"></span></a>
     </p>
 </div>

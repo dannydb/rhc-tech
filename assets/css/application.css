@@ -6832,8 +6832,13 @@ body {
 .navbar .navbar-brand {
   padding: 7px 15px 0;
   font-size: 22.4px;
-  font-weight: 300;
+  font-weight: 400;
   text-transform: lowercase;
+}
+
+.navbar .navbar-brand:active,
+.navbar .navbar-brand:focus {
+  color: #777777;
 }
 
 .navbar .navbar-nav li {

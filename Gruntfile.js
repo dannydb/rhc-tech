@@ -46,6 +46,7 @@ module.exports = function (grunt) {
               // 'bower_components/bootstrap/js/scrollspy.js',
               // 'bower_components/bootstrap/js/tab.js',
               'bower_components/bootstrap/js/affix.js',
+              'bower_components/fastclick/lib/fastclick.js',
               'assets/js/utility.js'              
             ],
             dest: 'assets/js/application.js'

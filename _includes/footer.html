@@ -11,5 +11,8 @@
         </footer>
 
         <script src="{{ page.base_url }}/assets/js/application.js"></script>
+        {% if page.template_class == 'category' %}
+        <script src="{{ page.base_url }}/assets/js/checklist.js"></script>
+        {% endif %}
     </body>
 </html>

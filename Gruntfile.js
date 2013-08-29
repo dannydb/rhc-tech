@@ -46,6 +46,12 @@ module.exports = function (grunt) {
               // 'bower_components/bootstrap/js/scrollspy.js',
               // 'bower_components/bootstrap/js/tab.js',
               'bower_components/bootstrap/js/affix.js',
+              'assets/js/utility.js'              
+            ],
+            dest: 'assets/js/application.js'
+          },
+          checklist: {
+            src: [
               'bower_components/underscore/underscore-min.js',
               'bower_components/backbone/backbone-min.js',
               'bower_components/backbone.localStorage/backbone.localStorage-min.js',
@@ -55,10 +61,8 @@ module.exports = function (grunt) {
               'assets/js/views/app-view.js',
               'assets/js/routers/router.js',
               'assets/js/app.js'
-
-              
-            ],
-            dest: 'assets/js/application.js'
+              ],
+              dest: 'assets/js/checklist.js'
           }
         },
 

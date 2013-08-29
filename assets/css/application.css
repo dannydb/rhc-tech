@@ -6823,30 +6823,30 @@ body {
   font-weight: 300;
 }
 
-.navbar img {
+.navbar.navbar-inverse img {
   height: 40px;
   margin-top: -2px;
   margin-right: 5px;
 }
 
-.navbar .navbar-brand.navbar-inverse {
+.navbar.navbar-inverse .navbar-brand {
   padding: 7px 15px 0;
   font-size: 22.4px;
   font-weight: 300;
   text-transform: lowercase;
 }
 
-.navbar .navbar-brand.navbar-inverse:active,
-.navbar .navbar-brand.navbar-inverse:focus {
+.navbar.navbar-inverse .navbar-brand:active,
+.navbar.navbar-inverse .navbar-brand:focus {
   color: #999999;
 }
 
-.navbar .navbar-nav li {
+.navbar.navbar-inverse .navbar-nav li {
   font-weight: 300;
   text-transform: lowercase;
 }
 
-.navbar .navbar-nav li a {
+.navbar.navbar-inverse .navbar-nav li a {
   color: #fff;
 }
 

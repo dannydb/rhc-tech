@@ -6968,7 +6968,7 @@ body {
 
 .category #todo-list li {
   position: relative;
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .category #todo-list li:last-child {
@@ -6994,10 +6994,10 @@ body {
 .category #todo-list li .toggle {
   position: absolute;
   top: 0;
-  bottom: 0;
+  bottom: auto;
   width: 30px;
   height: auto;
-  margin: auto 0;
+  margin: 0;
   text-align: center;
   border: none;
   -webkit-appearance: none;
@@ -7008,7 +7008,7 @@ body {
 
 .category #todo-list li .toggle:after {
   font-size: 20px;
-  line-height: 43px;
+  line-height: 40px;
   color: #d9d9d9;
   text-shadow: 0 -1px 0 #bfbfbf;
   content: '✔';
@@ -7028,7 +7028,7 @@ body {
   display: block;
   padding: 5px 15px;
   margin-left: 30px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.2;
   word-break: break-word;
   -webkit-transition: color 0.4s;

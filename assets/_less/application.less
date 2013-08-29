@@ -182,7 +182,7 @@ body {
 
 	#todo-list li {
 		position: relative;
-		font-size: 24px;
+		font-size: @font-size-base *1.25;
 	}
 
 	#todo-list li:last-child {
@@ -212,8 +212,8 @@ body {
 		height: auto;
 		position: absolute;
 		top: 0;
-		bottom: 0;
-		margin: auto 0;
+		bottom: auto;
+		margin: 0;
 		border: none; /* Mobile Safari */
 		-webkit-appearance: none;
 		/*-moz-appearance: none;*/
@@ -224,7 +224,7 @@ body {
 
 	#todo-list li .toggle:after {
 		content: '✔';
-		line-height: 43px; /* 40 + a couple of pixels visual adjustment */
+		line-height: 40px; /* 40 + a couple of pixels visual adjustment */
 		font-size: 20px;
 		color: #d9d9d9;
 		text-shadow: 0 -1px 0 #bfbfbf;
@@ -241,7 +241,7 @@ body {
 	}
 
 	#todo-list li label {
-		font-weight: 300;
+		font-weight: 400;
 		word-break: break-word;
 		padding: 5px 15px;
 		margin-left: 30px;

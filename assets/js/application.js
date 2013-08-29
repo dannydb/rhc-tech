@@ -1241,6 +1241,10 @@ if (typeof define !== 'undefined' && define.amd) {
 	window.FastClick = FastClick;
 }
 
+$(function() {
+    FastClick.attach(document.body);
+});
+
 // Mobile Safari in standalone mode
 if(("standalone" in window.navigator) && window.navigator.standalone){
  

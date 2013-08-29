@@ -6825,11 +6825,12 @@ body {
 
 .navbar img {
   height: 40px;
+  margin-top: -2px;
   margin-right: 5px;
 }
 
 .navbar .navbar-brand {
-  padding: 5px 15px 0;
+  padding: 7px 15px 0;
   font-size: 22.4px;
   font-weight: 300;
   text-transform: lowercase;
@@ -6950,7 +6951,7 @@ body {
 .category #toggle-all {
   position: absolute;
   top: 25px;
-  right: 0;
+  right: 15px;
 }
 
 @media (max-width: 767px) {

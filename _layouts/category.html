@@ -3,46 +3,49 @@ layout: default
 template_class: category
 base_url: ".."
 ---
-
-<section class="intro col-xs-12 col-sm-12">
-	<h1>{{ page.title }}</h1>
-	{{ content }}
-</section>
-<section id="todoapp" class="col-xs-12 col-sm-6 col-sm-push-6">
-	
-	<h2>Checklist</h2>
-	<a id="toggle-all" class="btn btn-warning btn-sm">Reset all</a>
-	<!-- <input id="new-todo" placeholder="What needs to be done?" autofocus> -->
-	<header id="list-header"></header>
-	<section id="main">
-		<ul id="todo-list"></ul>
+<div class="row">
+	<section class="intro col-xs-12 col-sm-12">
+		<h1>{{ page.title }}</h1>
+		{{ content }}
 	</section>
-	<header id="list-footer"></header>
-</section>
-<section class="col-xs-12 col-sm-6 col-sm-pull-6">
+</div>
+<div class="row">
+	<section id="todoapp" class="col-xs-12 col-md-8 col-md-push-4">
+		
+		<h2>Checklist</h2>
+		<a id="toggle-all" class="btn btn-warning btn-sm">Reset all</a>
+		<!-- <input id="new-todo" placeholder="What needs to be done?" autofocus> -->
+		<header id="list-header"></header>
+		<section id="main">
+			<ul id="todo-list"></ul>
+		</section>
+		<header id="list-footer"></header>
+	</section>
+	<section class="col-xs-12 col-md-4 col-md-pull-8">
 
-  <h2>Help Topics</h2>
+	  <h2>Help Topics</h2>
 
-  <ul class="posts">
-  	{% if page.title == "Video" %}
-	    {% for post in site.categories.video reversed %}
-	      {% include category_post.html %}
-	    {% endfor %}
-	{% elsif page.title == "Audio" %}
-	    {% for post in site.categories.audio reversed %}
-	      {% include category_post.html %}
-	    {% endfor %}
-	{% elsif page.title == "Setup" %}
-	    {% for post in site.categories.setup reversed %}
-	      {% include category_post.html %}
-	    {% endfor %}
-	{% elsif page.title == "Teardown" %}
-	    {% for post in site.categories.teardown reversed %}
-	      {% include category_post.html %}
-	    {% endfor %}
-	{% endif %}
-  </ul>
-</section>
+	  <ul class="posts">
+	  	{% if page.title == "Video" %}
+		    {% for post in site.categories.video reversed %}
+		      {% include category_post.html %}
+		    {% endfor %}
+		{% elsif page.title == "Audio" %}
+		    {% for post in site.categories.audio reversed %}
+		      {% include category_post.html %}
+		    {% endfor %}
+		{% elsif page.title == "Setup" %}
+		    {% for post in site.categories.setup reversed %}
+		      {% include category_post.html %}
+		    {% endfor %}
+		{% elsif page.title == "Teardown" %}
+		    {% for post in site.categories.teardown reversed %}
+		      {% include category_post.html %}
+		    {% endfor %}
+		{% endif %}
+	  </ul>
+	</section>
+</div>
 
 <script type="text/template" id="item-template">
 	<div class="view">
@@ -57,7 +60,7 @@ base_url: ".."
 	<div id="filters" class="btn-group btn-group-sm">
 			<a class="btn btn-default active" href="#/">All</a>
 			<a class="btn btn-default" href="#/active">Active</a>
-			<a class="btn btn-default" href="#/completed">Completed</a>
+			<a class="btn btn-default" href="#/completed">Done</a>
 	</div>
 
 	<span id="todo-count"><strong><%= remaining %></strong> <%= remaining === 1 ? 'item' : 'items' %> left</span>

@@ -6829,16 +6829,16 @@ body {
   margin-right: 5px;
 }
 
-.navbar .navbar-brand {
+.navbar .navbar-brand.navbar-inverse {
   padding: 7px 15px 0;
   font-size: 22.4px;
   font-weight: 300;
   text-transform: lowercase;
 }
 
-.navbar .navbar-brand:active,
-.navbar .navbar-brand:focus {
-  color: #777777;
+.navbar .navbar-brand.navbar-inverse:active,
+.navbar .navbar-brand.navbar-inverse:focus {
+  color: #999999;
 }
 
 .navbar .navbar-nav li {

@@ -6823,14 +6823,13 @@ body {
   font-weight: 300;
 }
 
-@media (min-width: 768px) {
-  .jumbotron .btn {
-    padding: 15px;
-    text-align: left;
-  }
-  .jumbotron .btn .glyphicon {
-    float: right;
-  }
+.jumbotron .btn {
+  padding: 15px;
+  text-align: left;
+}
+
+.jumbotron .btn .glyphicon {
+  float: right;
 }
 
 .navbar.navbar-inverse img {

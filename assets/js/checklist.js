@@ -235,18 +235,36 @@ var app = app || {};
 			// from being re-rendered for every model. Only renders when the 'reset'
 			// event is triggered at the end of the fetch.
 			app.todos.fetch({reset: true});
+
+			// Make sure checklist items haven't been updated
+			app.todos.each(function(todo){
+				var title = todo.get('title');
+				var index = todo.get('order');
+				var checklist = this.$list.find('li');
+
+				if (title !== checklist[index - 1].innerHTML){
+					this.loadChecklist();
+				}
+			}, this);
+
+
+			// Make sure there aren't new checklist items and replace the local storage if there are
 			if (app.todos.length !== this.$list.find('li').length) {
-				_.invoke(app.todos.completed(), 'destroy');
-				_.invoke(app.todos.remaining(), 'destroy');
-				this.$list.find('li').each(function(element){
-					var item_attributes  = {
-						title: $(this).text(),
-						order: app.todos.nextOrder(),
-						completed: false
-					}
-					app.todos.create(item_attributes);
-				});
+				this.loadChecklist();
 			}
+		},
+
+		loadChecklist: function(){
+			_.invoke(app.todos.completed(), 'destroy');
+			_.invoke(app.todos.remaining(), 'destroy');
+			this.$list.find('li').each(function(element){
+				var item_attributes  = {
+					title: $(this).text(),
+					order: app.todos.nextOrder(),
+					completed: false
+				}
+				app.todos.create(item_attributes);
+			});
 		},
 
 		// Re-rendering the App just means refreshing the statistics -- the rest

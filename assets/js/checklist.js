@@ -236,7 +236,7 @@ var app = app || {};
 			// event is triggered at the end of the fetch.
 			app.todos.fetch({reset: true});
 
-			// Make sure checklist items haven't been updated
+			// Make sure checklist items haven't been updated.
 			app.todos.each(function(todo){
 				var title = todo.get('title');
 				var index = todo.get('order');

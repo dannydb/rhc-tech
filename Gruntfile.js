@@ -129,7 +129,7 @@ module.exports = function (grunt) {
           command: 'cp assets/js/ _site/assets/js/'
         },
         liveStyle: {
-          command: 'cd _site; livestyle '
+          command: 'cd _site; livestyle --watchhtml '
         }
       }
   });

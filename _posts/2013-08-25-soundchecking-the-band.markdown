@@ -5,9 +5,9 @@ date:   2013-08-25 19:32:28
 categories: audio
 ---
 
-Before we get started with our soundcheck, let's reset the board to our default settings. Do this by tapping <span class="btn btn-primary btn-xs">view</span>, scrolling to "RHC Default" and selecting "load." 
+Before we get started with our soundcheck, let's reset the board to our default settings. Do this by tapping <span class="btn btn-primary btn-xs">view</span>, scrolling to "RHC Default" and pressing <span class="btn btn-primary btn-xs">load</span>. 
 
-Now that our standard inputs, monitor mixes and output routing are recalled we can move on to sound-checking the band once everyone is in place. 
+Now that our standard inputs, monitor mixes and output routing are recalled, we can move on to sound-checking the band once everyone is in place. 
 
 The basic process to check a single channel looks like this:
 

@@ -7,8 +7,7 @@ title: Audio
 
 ― *C.S. Lewis, The Weight of Glory*
 
-<span id="checklist" class="hidden">
-
+<span id="checklist" class="hidden"></span>
 - Unpack console
 - Connect power
 - Connect playback USB from Mac to x32 USB audio interface (left of console rear panel)
@@ -29,4 +28,3 @@ title: Audio
 - Pack console (USB, power, lamp, talkback mic and playback cable stored in doghouse)
 - Wind ethercon snake cables and store in "SNAKE" bin
 
-</span>

@@ -5,12 +5,17 @@ base_url: ".."
 ---
 <div class="row">
 	<section class="intro col-xs-12 col-sm-12">
-		<h1>{{ page.title }}</h1>
-		{{ content }}
+		<div class="row">
+			<h1 class="col-xs-12 col-sm-12">{{ page.title }}</h1>
+			<div class="col-xs-12 col-sm-8 col-sm-offset-4">
+				{{ content }}
+			</div>
+		</div>
 	</section>
 </div>
 <div class="row">
-	<section id="todoapp" class="col-xs-12 col-md-7 col-md-push-5">
+
+	<section id="todoapp" class="col-xs-12 col-md-8 col-md-push-4">
 		
 		<h2>Checklist</h2>
 		<a id="toggle-all" class="btn btn-warning btn-sm">Reset</a>
@@ -21,7 +26,7 @@ base_url: ".."
 		</section>
 		<header id="list-footer"></header>
 	</section>
-	<section class="col-xs-12 col-md-5 col-md-pull-7">
+	<section class="col-xs-12 col-md-4 col-md-pull-8">
 
 	  <h2>Help Topics</h2>
 

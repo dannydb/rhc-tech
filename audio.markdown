@@ -3,6 +3,8 @@ layout: category
 title: Audio
 ---
 
+Intro tktk  
+
 <span id="checklist" class="hidden"></span>
 - Unpack console
 - Connect power
@@ -23,4 +25,3 @@ title: Audio
 - Service
 - Pack console (USB, power, lamp, talkback mic and playback cable stored in doghouse)
 - Wind ethercon snake cables and store in "SNAKE" bin
-

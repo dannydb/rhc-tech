@@ -3,7 +3,9 @@ layout: category
 title: Audio
 ---
 
-Intro tktk  
+“The books or the music in which we thought the beauty was located will betray us if we trust to them; it was not in them, it only came through them, and what came through them was longing. These things — the beauty, the memory of our own past — are good images of what we really desire; but if they are mistaken for the thing itself they turn into dumb idols, breaking the hearts of their worshippers. For they are not the thing itself; they are only the scent of a flower we have not found, the echo of a tune we have not heard, news from a country we have never yet visited.” 
+
+― *C.S. Lewis, The Weight of Glory*
 
 <span id="checklist" class="hidden"></span>
 - Unpack console
